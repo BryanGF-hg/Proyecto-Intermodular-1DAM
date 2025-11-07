@@ -1,0 +1,12 @@
+{
+ "datos personales":{
+   "nombre":"Bryan",
+   "apellidos":"Glot Fong",
+   "email":"bryan@gmail.com",
+   "telefono":"12345678",
+   "direccion":"La calle de Bryan Glot",
+   "codigopostal":"46000 Valencia"
+ },
+ "experencia":"",
+ "formacion":""
+}
