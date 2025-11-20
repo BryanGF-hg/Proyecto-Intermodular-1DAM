@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>Plantilla fetch</title>
+ <style>
+  #datos_personales{color:LightGreen;padding:10px;}
+  #experencias_laborales{color:Green;padding:10px;}
+ </style>
+</head>
+<body>
+ <div id="datos_personales">
+ <h1>--nombre--</h1>
+ <h2>--apellidos--</h2>
+ <h3>--correo--</h3>
+ </div>
+ <div id="experencias_laborales">
+ <h1>--formacion--</h1>
+ <h2>--lugar_de_estudio--</h2>
+ <h3>--timespan--</h3>
+ </div> 
+
+ <script>
+  fetch("static/curriculum.json")
+  .then(function(respuesta){
+      return respuesta.json(); // La info viene json
+   }
+  )
+  .then(function(datos){
+   console.log(datos);         // Vamos a vomitar en consola
+   document.querySelector("h1").textContent = datos.datos_personales.nombre
+   document.querySelector("h2").textContent = datos.datos_personales.apellidos
+   document.querySelector("h3").textContent = datos.datos_personales.email
+  })
+
+  .then(function(datos1){
+   console.log(datos1);         // Vamos a vomitar en consola
+   document.querySelector("h1").textContent = datos1.experencias_laborales.formacion
+   document.querySelector("h2").textContent = datos1.experencias_laborales.lugar_de_estudio
+   document.querySelector("h3").textContent = datos1.experencias_laborales.timespan
+  })
+ </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+ "datos_personales":{
+  "nombre":"Bryan",
+  "apellidos":"Glot Fong",
+  "email":"bryan@gmail.com"
+ },
+ "experencias_laborales":{
+   "formacion":"Estudiante",
+   "lugar_de_estudio":"CEAC",
+   "timespan":"2025-presente"
+ }
+}
+
